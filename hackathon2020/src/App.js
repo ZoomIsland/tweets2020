@@ -5,7 +5,9 @@ import Question from './components/Question/Question'
 class App extends Component {
   state = {
     answers: [],
-    page: 'question1'
+    page: 'question1',
+    infoHide: 'hidden',
+    buttonDisable: false
   }
 
   onAnswer = (event) => {
@@ -18,6 +20,8 @@ class App extends Component {
     }
     midAnswers.push(answer);
     this.setState({answers: midAnswers})
+    this.setState({infoHide: ""})
+    this.setState({buttonDisable: true})
   }
   
   // onAnswer = function that pushes the answer (true/false) into the answers array on the state
@@ -34,7 +38,10 @@ class App extends Component {
           question="The south just seceded what do you do?" 
           trueAnswer="go to war" 
           falseAnswer="give in to their wishes"
-          onAnswer={this.onAnswer} />
+          info="Abraham Lincoln faced this decision in..."
+          onAnswer={this.onAnswer}
+          infoHide={this.state.infoHide}
+          buttonDisable={this.state.buttonDisable} />
         break;
       // case "results":
       //   currentComp = <Results />
