@@ -1,8 +1,8 @@
 import React from 'react';
-import { TwitterTweetEmbed } from 'react-twitter-embed';
+import { Tweet } from 'react-twitter-widgets';
+import questions from '../../Questions'
 
 function Question(props) {
-
   const answers = ['Joe Biden', 'Donald Trump', 'Jo Jorgensen', 'Howie Hawkins'];
 
   const buttons = answers.map(answer => {
@@ -14,14 +14,13 @@ function Question(props) {
   })
 
   console.log(props.questionInfo.question);
+  const tweetId = questions[props.index].question;
   return (
 
     <div>
       <div id="test">
             <div className={"censor " + props.censorHide}></div>
-            <TwitterTweetEmbed 
-              tweetId={props.questionInfo.question}
-            />
+            <Tweet tweetId={tweetId} />
       </div>
       <div>
 

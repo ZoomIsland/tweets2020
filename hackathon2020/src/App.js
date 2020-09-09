@@ -8,8 +8,9 @@ class App extends Component {
   state = {
     answers: [1, 2, 3],
     index: 0,
+    tweetId: "1216347531321446400",
     infoHide: 'hidden',
-    censorHide: '',
+    censorHide: "1216347531321446400",
     buttonDisable: false
   }
 
@@ -30,9 +31,10 @@ class App extends Component {
   
   onNext = () => {
     this.setState({index: this.state.index + 1});
-    this.setState({infoHide: "hidden"})
-    this.setState({censorHide: ""})
-    this.setState({buttonDisable: false})
+    this.setState({infoHide: "hidden"});
+    this.setState({censorHide: ""});
+    this.setState({buttonDisable: false});
+    this.forceUpdate();
     console.log(this.state.index);
   }
 
@@ -52,6 +54,7 @@ class App extends Component {
 
         
         <Question 
+          index={this.state.index}
           questionInfo={questions[this.state.index]}
           onAnswer={this.onAnswer} 
           onNext={this.onNext} 
