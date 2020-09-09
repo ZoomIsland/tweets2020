@@ -32,3 +32,19 @@ h1, h2 {
   margin: 20px;
   background-color: darkgrey;
 }
+
+.img-placeholder {
+  width: 260px;
+  height: 200px;
+  background-color: darkgray;
+}
+
+.startGame {
+  width: 165px;
+  height: 75px;
+}
+
+.guess {
+  text-align: center;
+  width: 250px;
+}
