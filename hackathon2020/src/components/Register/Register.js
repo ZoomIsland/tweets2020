@@ -3,8 +3,12 @@ import './Register.css';
 
 function Register() {
   return (
-    <div className="registerBtn">
-      Register to vote
+    <div className="regBtnDiv">
+      <a href="https://www.vote.org/am-i-registered-to-vote/">
+        <button className="registerBtn">
+          Register to vote
+        </button>
+      </a>
     </div>
   )
 }

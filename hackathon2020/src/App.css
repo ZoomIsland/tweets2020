@@ -48,3 +48,37 @@ h1, h2 {
   text-align: center;
   width: 250px;
 }
+
+.results {
+  width: 260px;
+  height: 160px;
+  background-color: darkgray;
+}
+
+.endMsg {
+  text-align: center;
+  width: 260px;
+  position: absolute;
+  bottom: 155px;
+}
+
+.shareTweet {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 45px;
+}
+
+.regLink {
+  width: 230px;
+  height: 75px;
+}
+
+.regVote {
+  width: 230px;
+  height: 75px;
+  background-color: #c8c8c8;
+  position: absolute;
+  bottom: 45px;
+}

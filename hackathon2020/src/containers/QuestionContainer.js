@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../App.css';
+import { Link } from 'react-router-dom';
+
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import Qheader from '../components/Qheader/Qheader'
 import Question from '../components/Question/Question';
@@ -57,7 +58,11 @@ class QuestionContainer extends Component {
                  <button className={this.state.infoHide + " nextBtn"}>See Results</button>
              </Link>
          )
-     } 
+     } else {
+        return (
+        <button className={this.state.infoHide + " nextBtn"} onClick={this.onNext}>Next Tweet</button>
+        )
+     }
   }
   
   render() {
@@ -79,7 +84,7 @@ class QuestionContainer extends Component {
           trueBtn={this.state.trueBtn}
           falseBtn={this.state.falseBtn} />
 
-        <button className={this.state.infoHide + " nextBtn"} onClick={this.onNext}>Next Tweet</button>
+        {this.nextBtn()}
 
         <Register />
 
