@@ -1,0 +1,45 @@
+.questionContainer {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tweetContainer {
+  width: 100%;
+  position: relative;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.censor {
+  height: 80px;
+  width: 110%;
+  position: absolute;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  background-color: #ccc;
+}
+.answerBtns {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+}
+.answerBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.answerBtn button {
+  width: 136px;
+  height: 63px;
+}
+.answerImg {
+  width: 80px;
+  height: 80px;
+}

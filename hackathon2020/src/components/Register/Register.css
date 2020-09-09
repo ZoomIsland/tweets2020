@@ -1,0 +1,6 @@
+.registerBtn {
+  position: absolute;
+  bottom: 25px;
+  border: 1px solid black;
+  padding: 6px 20px;
+}
