@@ -5,13 +5,18 @@ import QuestionContainer from '../containers/QuestionContainer'
 import Results from '../containers/Results'
 
 
-function Routes() {
+function Routes(props) {
+    const { onAnswer, answers } = props;
 
     return(
         <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/questions' component={QuestionContainer} />
-            <Route exact path='/results' component={Results} />
+            <Route 
+                exact path='/questions' 
+                render={(props) => <QuestionContainer {...props} onAnswer={onAnswer} answers={answers} />} />
+            <Route 
+                exact path='/results' 
+                render={(props) => <Results {...props} answers={answers} />} />
         </Switch>
     )
 }

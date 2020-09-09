@@ -2,16 +2,25 @@ import React from 'react';
 import { Share } from 'react-twitter-widgets'
 import ProgressBar from '../components/ProgressBar/ProgressBar'
 
-function Results () {
+function Results (props) {
+    const finalTally = () => {
+    let totalRight = 0;
+    for (let i=0; i < props.answers.length; i++) {
+        if (props.answers[i] === true) {
+            totalRight++;
+        }
+    }
+    let percent = (totalRight / 20) * 100;
+    return percent;
+    }
     return (
         <div className="mainPage">
-            <ProgressBar answers={[1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]}/>
+            <ProgressBar answers={props.answers}/>
             <h1>Complete!</h1>
 
             <div className="results">
-
+                {finalTally()}
             </div>
-            {/* <button>Tweet your score!</button> */}
             <div className="shareTweet">
                 <Share options={{
                     text: "I got 88%! Find out how well you know your possible presidents' twitter habits!",

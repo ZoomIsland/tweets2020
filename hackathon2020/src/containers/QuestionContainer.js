@@ -8,7 +8,6 @@ import Register from '../components/Register/Register';
 
 class QuestionContainer extends Component {
   state = {
-    answers: [],
     index: 0,
     qHeader: "Who tweeted this?",
     trueBtn: "",
@@ -19,19 +18,14 @@ class QuestionContainer extends Component {
   }
 
   onAnswer = (event) => {
-    const midAnswers = this.state.answers;
-    let answer;
+    this.props.onAnswer(event)
     if (event.target.value === 'true') {
-      answer = true;
       this.setState({qHeader: "Correct!"})
       this.setState({trueBtn: "correct"})
     } else {
-      answer = false;
       this.setState({qHeader: "Wrong!"})
       this.setState({falseBtn: "wrong"})
     }
-    midAnswers.push(answer);
-    this.setState({answers: midAnswers})
     this.setState({infoHide: ""})
     this.setState({censorHide: "hidden"})
     this.setState({buttonDisable: true})
@@ -47,12 +41,8 @@ class QuestionContainer extends Component {
     this.setState({falseBtn: ""});
   }
 
-  // onAnswer = function that pushes the answer (true/false) into the answers array on the state
-
-  // changePage = function that updates the state.page to be the current question or results page
-
   nextBtn = () => {
-     if (this.state.answers.length === 20) {
+     if (this.props.answers.length === 20) {
          return (
              <Link to='/results'>
                  <button className={this.state.infoHide + " nextBtn"}>See Results</button>
@@ -70,7 +60,7 @@ class QuestionContainer extends Component {
     return (
       <div className="mainPage">
 
-        <ProgressBar answers={this.state.answers}/>
+        <ProgressBar answers={this.props.answers}/>
 
         <Qheader header={this.state.qHeader} />
         
@@ -87,8 +77,6 @@ class QuestionContainer extends Component {
         {this.nextBtn()}
 
         <Register />
-
-        {/* Results page */}
   
       </div>
     );
