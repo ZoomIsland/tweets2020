@@ -50,7 +50,7 @@ class QuestionContainer extends Component {
          )
      } else {
         return (
-        <button className={this.state.infoHide + " nextBtn"} onClick={this.onNext}>Next Tweet</button>
+        <button className={this.state.infoHide + " nextBtn"} onClick={this.onNext}>Next</button>
         )
      }
   }

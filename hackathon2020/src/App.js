@@ -23,7 +23,7 @@ class App extends Component {
 
     return (
       <div className="mainPage">
-        <h1>Twitter Blasters</h1>
+        <h1 className="header">tweet <span className="redHead">20</span><span className="blueHead">20</span></h1>
         <Routes onAnswer={this.onAnswer} answers={this.state.answers}/> 
       </div>
     );

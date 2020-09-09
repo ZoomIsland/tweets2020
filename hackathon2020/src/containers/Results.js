@@ -1,5 +1,7 @@
 import React from 'react';
 import { Share } from 'react-twitter-widgets'
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import ProgressBar from '../components/ProgressBar/ProgressBar'
 
 function Results (props) {
@@ -10,7 +12,7 @@ function Results (props) {
             totalRight++;
         }
     }
-    let percent = (totalRight / 20) * 100;
+    let percent = Math.floor((totalRight / 20) * 100);
     return percent;
     }
     return (
@@ -19,11 +21,15 @@ function Results (props) {
             <h1>Complete!</h1>
 
             <div className="results">
-                {finalTally()}
+                <CircularProgressbar 
+                    value={finalTally()} 
+                    text={`${finalTally()}%`}
+                    counterClockwise={true}
+                />
             </div>
             <div className="shareTweet">
                 <Share options={{
-                    text: "I got 88%! Find out how well you know your possible presidents' twitter habits!",
+                    text: `I got ${finalTally()}%! Find out how well you know your possible presidents' twitter habits!`,
                 }}
                 url={
                     '/'
@@ -31,7 +37,7 @@ function Results (props) {
                 <h4>Tweet your score!</h4>
             </div>
             <h3 className="endMsg">You should totally put this knowledge to good use...</h3>
-            <a className="regLink" href="https://www.vote.org/am-i-registered-to-vote/"><button className="regVote">Register to vote</button></a>
+            <a className="regLink" href="https://www.vote.org/am-i-registered-to-vote/" target="_blank"><button className="regVote">Register to vote</button></a>
         </div>
     )
 }
