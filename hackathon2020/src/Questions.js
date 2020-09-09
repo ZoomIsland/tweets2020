@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "1216347531321446400",
+        question: "933354946111705097",
         answer: "Joe Biden",
     },
     {
@@ -9,75 +9,75 @@ const questions = [
     },
     {
         question: "933354946111705097",
-        answer: "Jo Jorgensen",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Howie Hawkins",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        answer: "Joe Biden",
+    },
+    {
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     },
     {
         question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        answer: "Joe Biden",
     },
     {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
-    },
-    {
-        question: "933354946111705097",
-        answer: "Joe Biedendnnnn",
+        question: "1216347531321446400",
+        answer: "Donald Trump",
     }
 ]
 

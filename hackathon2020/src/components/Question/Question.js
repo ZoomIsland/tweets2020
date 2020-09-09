@@ -12,7 +12,7 @@ function Question(props) {
       return (
       <div className="answerBtn">
         <img className="answerImg" src="https://www.orbistechnologies.com/wp-content/uploads/2018/12/profile-placeholder-image-gray-silhouette-no-vector-21542863.jpg" />
-        <button className={props.answerBtnColor} key='0' disabled={props.buttonDisable} value="true" onClick={props.onAnswer}>
+        <button className={props.trueBtn} key='0' disabled={props.buttonDisable} value="true" onClick={props.onAnswer}>
           {answer}
         </button>
       </div>
@@ -21,7 +21,7 @@ function Question(props) {
       return (
         <div className="answerBtn">
         <img className="answerImg" src="https://www.orbistechnologies.com/wp-content/uploads/2018/12/profile-placeholder-image-gray-silhouette-no-vector-21542863.jpg" />
-          <button className={props.answerBtnColor} key='1' disabled={props.buttonDisable} value="false" onClick={props.onAnswer}>
+          <button className={props.falseBtn} key='1' disabled={props.buttonDisable} value="false" onClick={props.onAnswer}>
             {answer}
           </button>
         </div>

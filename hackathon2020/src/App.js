@@ -10,25 +10,24 @@ class App extends Component {
     answers: [],
     index: 0,
     qHeader: "Who tweeted this?",
-    answerBtnColor: "",
+    trueBtn: "",
+    falseBtn: "",
     infoHide: 'hidden',
     censorHide: '',
     buttonDisable: false
   }
 
   onAnswer = (event) => {
-    console.log(event.target)
-    event.target.className="wrong"
     const midAnswers = this.state.answers;
     let answer;
     if (event.target.value === 'true') {
       answer = true;
       this.setState({qHeader: "Correct!"})
-      event.target.className="correct"
+      this.setState({trueBtn: "correct"})
     } else {
       answer = false;
       this.setState({qHeader: "Wrong!"})
-      event.target.className="wrong"
+      this.setState({falseBtn: "wrong"})
     }
     midAnswers.push(answer);
     this.setState({answers: midAnswers})
@@ -43,8 +42,8 @@ class App extends Component {
     this.setState({infoHide: "hidden"});
     this.setState({censorHide: ""});
     this.setState({buttonDisable: false});
-    this.forceUpdate();
-    console.log(this.state.index);
+    this.setState({trueBtn: ""});
+    this.setState({falseBtn: ""});
   }
 
   // onAnswer = function that pushes the answer (true/false) into the answers array on the state
@@ -70,7 +69,8 @@ class App extends Component {
           infoHide={this.state.infoHide}
           censorHide={this.state.censorHide} 
           buttonDisable={this.state.buttonDisable}
-          answerBtnColor={this.state.answerBtnColor} />
+          trueBtn={this.state.trueBtn}
+          falseBtn={this.state.falseBtn} />
 
         <button className={this.state.infoHide + " nextBtn"} onClick={this.onNext}>Next Tweet</button>
 
