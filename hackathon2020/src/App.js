@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 import './App.css';
-import Question from './components/Question/Question'
+import Question from './components/Question/Question';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
 class App extends Component {
   state = {
-    answers: [],
+    answers: [1, 2, 3],
     page: 'question1',
     infoHide: 'hidden',
     buttonDisable: false
@@ -51,9 +53,21 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Historical Decisions</h1>
+        <h1>Twitter Blasters</h1>
   
-        {currentComp}
+        <ProgressBar answers={this.state.answers}/>
+
+        <div id="test">
+          <div class="censor"></div>
+          <TwitterTweetEmbed 
+            tweetId={'933354946111705097'}
+          />
+        </div>
+
+        {/* buttons */}
+
+        {/* Register to vote */}
+
         {/* Current Question with 2 answers (and info box) */}
         {/* Results page */}
   

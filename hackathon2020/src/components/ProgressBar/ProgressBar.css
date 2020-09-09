@@ -1,0 +1,10 @@
+.bar {
+    width: 500px;
+    height: 50px;
+    background-color: lightgrey;
+}
+
+.complete {
+    height: 50px;
+    background-color: cornflowerblue;
+}
