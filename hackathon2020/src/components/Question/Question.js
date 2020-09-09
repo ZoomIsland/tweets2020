@@ -13,7 +13,9 @@ function Question(props) {
     }
   })
 
+  console.log(props.questionInfo.question);
   return (
+
     <div>
       <div id="test">
             <div className={"censor " + props.censorHide}></div>

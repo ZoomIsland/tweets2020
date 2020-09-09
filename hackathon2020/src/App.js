@@ -8,7 +8,6 @@ class App extends Component {
   state = {
     answers: [1, 2, 3],
     index: 0,
-    page: 'question1',
     infoHide: 'hidden',
     censorHide: '',
     buttonDisable: false
@@ -44,23 +43,6 @@ class App extends Component {
 
   
   render() {
-    let currentComp;
-    switch(this.state.page) {
-      case "question1":
-        currentComp = <Question 
-          question="The south just seceded what do you do?" 
-          trueAnswer="go to war" 
-          falseAnswer="give in to their wishes"
-          info="Abraham Lincoln faced this decision in..."
-          onAnswer={this.onAnswer}
-          infoHide={this.state.infoHide}
-          buttonDisable={this.state.buttonDisable} />
-        break;
-      // case "results":
-      //   currentComp = <Results />
-    }
-
-
 
     return (
       <div className="App">
