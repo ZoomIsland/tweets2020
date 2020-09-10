@@ -1,3 +1,16 @@
+.results {
+    width: 35vw;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CircularProgressbar {
+max-width: 205px;
+max-height: 205px;
+}
+
 .regBtn {
     background: linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
     border-radius: 36px;
