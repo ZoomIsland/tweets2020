@@ -138,7 +138,6 @@
 }
 
 .answerBtnActual:disabled {
-  background: linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
   opacity: 0.25;
 }
 
@@ -154,6 +153,9 @@
 .answerImg {
   width: 70px;
   height: 90px;
+}
+.answerImg:disabled {
+  opacity: 0.25;
 }
 
 .nextBtn {
@@ -180,7 +182,9 @@
   right: 30px;
   transition: 250ms;
 }
-
+.nextBtnContainer {
+  height: 103px;
+}
 .nextBtn:hover {
   background: #1DA1F2;
 }

@@ -13,27 +13,30 @@ class QuestionContainer extends Component {
     headColor: "",
     trueBtn: "",
     falseBtn: "",
+    unselected: "",
     infoHide: 'hidden',
     censorHide: '',
     buttonDisable: false
   }
 
   onAnswer = (bool) => {
-    this.props.onAnswer(bool)
-    if (bool === 'true') {
-      this.PlayAudio('./Audio/Hackathon - Correct Answer.wav')
-      this.setState({qHeader: "CORRECT!"})
-      this.setState({headColor: "headCorrect"})
-      this.setState({trueBtn: "correct"})
-    } else {
-      this.PlayAudio('./Audio/Hackathon - Incorrect Answer.wav')
-      this.setState({qHeader: "SO CLOSE!"})
-      this.setState({headColor: "headWrong"})
-      this.setState({falseBtn: "wrong"})
+    if (this.state.buttonDisable === false) {
+      this.props.onAnswer(bool)
+      if (bool === 'true') {
+        this.PlayAudio('./Audio/Hackathon - Correct Answer.wav')
+        this.setState({qHeader: "CORRECT!"})
+        this.setState({headColor: "headCorrect"})
+        this.setState({trueBtn: "correct"})
+      } else {
+        this.PlayAudio('./Audio/Hackathon - Incorrect Answer.wav')
+        this.setState({qHeader: "SO CLOSE!"})
+        this.setState({headColor: "headWrong"})
+        this.setState({falseBtn: "wrong"})
+      }
+      this.setState({infoHide: ""})
+      this.setState({censorHide: "hidden"})
+      this.setState({buttonDisable: true})
     }
-    this.setState({infoHide: ""})
-    this.setState({censorHide: "hidden"})
-    this.setState({buttonDisable: true})
   }
   
   onNext = () => {
@@ -89,9 +92,12 @@ class QuestionContainer extends Component {
           censorHide={this.state.censorHide} 
           buttonDisable={this.state.buttonDisable}
           trueBtn={this.state.trueBtn}
-          falseBtn={this.state.falseBtn} />
-
-        {this.nextBtn()}
+          falseBtn={this.state.falseBtn}
+          unselected={this.state.unselected} />
+        
+        <div className="nextBtnContainer">
+          {this.nextBtn()}
+        </div>
 
         <Register />
   

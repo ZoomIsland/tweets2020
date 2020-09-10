@@ -6,13 +6,13 @@ function Question(props) {
   const getImage = (name) => {
     switch(name) {
       case "Trump":
-        return <img className="answerImg" src="/Candidate_Trump.svg" alt="Donald Trump" />
+        return <img className="answerImg" src="/Candidate_Trump_GIF.gif" alt="Donald Trump" disabled={props.buttonDisable} />
       case "Biden":
-        return <img className="answerImg" src="/Candidate_Biden.svg" alt="Joe Biden" />
+        return <img className="answerImg" src="/Candidate_Biden.gif" alt="Joe Biden" disabled={props.buttonDisable} />
       case "Jorgensen":
-        return <img className="answerImg" src="/Candidate_Jorgensen.svg" alt="Jo Jorgensen" />
+        return <img className="answerImg" src="/Candidate_Jorgensen.gif" alt="Jo Jorgensen" disabled={props.buttonDisable} />
       case "Hawkins":
-        return <img className="answerImg" src="/Candidate_Hawkins.svg" alt="Howie Hawkins" />
+        return <img className="answerImg" src="/Candidate_Hawkins.gif" alt="Howie Hawkins" disabled={props.buttonDisable} />
     }
   }
 
