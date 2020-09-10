@@ -30,12 +30,11 @@ function Results (props) {
                     <CircularProgressbar 
                     value={score}
                     text={`${score}%`} 
-                    counterClockwise={true}
                     strokeWidth={10}
                     styles={buildStyles({
                         textColor: "#10C8B2",
                         pathColor: "#10C8B2",
-                        trailColor: "white",
+                        trailColor: "#E5E5E5",
                         textSize: "35px",
                       })}
                     />
