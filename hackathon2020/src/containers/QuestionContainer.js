@@ -75,7 +75,7 @@ class QuestionContainer extends Component {
   render() {
 
     return (
-      <div className="questionContainer">
+      <div className="questionPage">
 
         <ProgressBar answers={this.props.answers}/>
 
