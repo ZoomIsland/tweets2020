@@ -7,13 +7,8 @@
 }
 
 .complete {
-<<<<<<< HEAD
+
     height: 8px;
     background: #EB5757;
     border-radius: 16px;
-=======
-    height: 10px;
-    background-color: #EB5757;
-    border-radius: 5px;
->>>>>>> submaster
 }
