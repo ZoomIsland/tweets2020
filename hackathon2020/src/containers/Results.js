@@ -18,7 +18,8 @@ function Results (props) {
     }
 
     let score = finalTally();
-
+    
+    const needDominantBaselineFix = true;
     
     return (
         <div className="mainPage">
@@ -30,13 +31,13 @@ function Results (props) {
                     {score => (
                     <CircularProgressbar 
                     value={score}
-                    text={`${score}%`} 
+                    text={<tspan dy={needDominantBaselineFix ? 4 : 0} className="score">{`${score}%`}</tspan>} 
                     strokeWidth={10}
                     styles={buildStyles({
                         textColor: "#10C8B2",
                         pathColor: "#10C8B2",
                         trailColor: "#E5E5E5",
-                        textSize: "35px",
+                        textSize: "29px",
                       })}
                     />
                     )}
