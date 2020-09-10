@@ -2,6 +2,7 @@ const questions = [
     {
         question: "1303079343766331393",
         answer: "Joe Biden",
+        answer2: "Donald Trump",
     },
     {
         question: "1300840191771340801",
