@@ -42,7 +42,7 @@ class QuestionContainer extends Component {
   }
 
   nextBtn = () => {
-     if (this.props.answers.length === 20) {
+     if (this.props.answers.length === 10) {
          return (
              <Link to='/results'>
                  <button className={this.state.infoHide + " nextBtn"}>See Results</button>

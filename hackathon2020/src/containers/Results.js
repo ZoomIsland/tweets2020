@@ -12,7 +12,7 @@ function Results (props) {
             totalRight++;
         }
     }
-    let percent = Math.floor((totalRight / 20) * 100);
+    let percent = Math.floor((totalRight / 10) * 100);
     return percent;
     }
     return (

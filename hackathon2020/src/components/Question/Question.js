@@ -50,7 +50,9 @@ function Question(props) {
             <div className={"censor " + props.censorHide}>
             <i class="fab fa-twitter"></i>
             </div>
-            <Tweet tweetId={tweet.question} />
+            <div className="tweet-it">
+              <Tweet tweetId={tweet.question} />
+            </div>
       </div>
       <div className="answerBtns">
         {buttons}

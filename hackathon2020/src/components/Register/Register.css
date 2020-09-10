@@ -1,10 +1,10 @@
 .regBtnDiv {
-
+  position: relative;
   bottom: 25px;
+  margin-top: 40px;
 }
 
 .registerBtn {
-
   border: 1px solid black;
   padding: 6px 20px;
 }

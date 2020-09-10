@@ -77,16 +77,16 @@ h1, h2 {
 }
 
 .results {
-  width: 260px;
-  /* height: 160px; */
-  /* background-color: darkgray; */
+  width: 35vw;
+
 }
 
 .endMsg {
   text-align: center;
   width: 260px;
-  position: absolute;
-  bottom: 155px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .shareTweet {
@@ -95,6 +95,7 @@ h1, h2 {
   flex-direction: row;
   justify-content: space-between;
   margin: 45px;
+  position: relative;
 }
 
 .regLink {
@@ -106,6 +107,10 @@ h1, h2 {
   width: 230px;
   height: 75px;
   background-color: #c8c8c8;
-  position: absolute;
-  bottom: 45px;
+  position: relative;
+  /* bottom: 45px; */
+}
+
+.tweetContainer {
+  position: relative;
 }
