@@ -1,0 +1,95 @@
+.header {
+    margin: 15px 10px;
+    font-size: 35px;
+    color: #555555;
+}
+
+.twit-circ {
+    position: absolute;
+    border-color: 2px solid black;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.startGame {
+    width: 155px;
+    height: 45px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 33px;
+    border-color: #fff;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.2em;
+    color: #EB5757;
+    box-shadow: 0px 4px 20px rgba(141, 136, 136, 0.3);
+    margin-top: 8%;
+}
+  
+.guess {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    width: 70%;
+    padding-top: 20px;
+}
+
+.blue-home {
+    position: relative;
+    width: 92%;
+    height: 33%;
+    background: -webkit-linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
+    border-radius: 84px 84px 84px 0px;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 5%;
+}
+.candidates {
+    display: flex;
+    padding-bottom: 8%;
+}
+.trump-fig {
+    height: 13vh;
+}
+.jorg-fig {
+    height: 13vh;
+}
+.bid-fig {
+    height: 13vh;
+}
+.hawk-fig {
+    height: 13vh;
+    padding-right: 2%;
+}
+
+.red-home {
+    position: relative;
+    width: 92%;
+    height: 33%;
+    background: linear-gradient(0deg, #F21D1D 0%, #F76868 100%);
+    opacity: 0.84;
+    border-radius: 84px 84px 0px 84px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.red-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 3%; */
+}
