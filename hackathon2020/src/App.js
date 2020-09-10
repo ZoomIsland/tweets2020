@@ -8,6 +8,10 @@ class App extends Component {
     answers: [],
   }
 
+  pageReset = () => {
+    this.setState({answers: []})
+  }
+
   onAnswer = (bool) => {
     const midAnswers = this.state.answers;
     let answer;
@@ -24,7 +28,7 @@ class App extends Component {
 
     return (
       <div className="mainPage">
-        <Link className="headerLink" to="/">
+        <Link className="headerLink" to="/" onClick={this.pageReset}>
           <h1 className="header">tweet <span className="redHead">20</span><span className="blueHead">20</span></h1>
         </Link>
         <Routes onAnswer={this.onAnswer} answers={this.state.answers}/> 

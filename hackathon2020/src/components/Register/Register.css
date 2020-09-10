@@ -16,11 +16,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .registerBtn:hover {
   cursor: pointer;
-  background-color: #44B1F6;
-  border-color: #fff;
+  border: none;
+  background: linear-gradient(0deg, #10C8B2 0%, #8EE9B9 100%);
 }
 .registerBtn:hover .reg-text {
   display: none;
