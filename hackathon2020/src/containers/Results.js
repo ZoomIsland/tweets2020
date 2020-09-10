@@ -24,7 +24,7 @@ function Results (props) {
     return (
         <div className="mainPage">
             <ProgressBar answers={props.answers}/>
-            <h1 className="green">Complete!</h1>
+            <h1 className="green">Your Score</h1>
 
             <div className="results">
                 <ProgressProvider valueStart={10} valueEnd={score}>
