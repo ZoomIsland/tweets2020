@@ -3,7 +3,7 @@ import { Share } from 'react-twitter-widgets'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ProgressBar from '../components/ProgressBar/ProgressBar'
-import ChangingProgressProvider from "./ChangingProgressProvider";
+import ProgressProvider from "./ProgressProvider";
 import './Results.css';
 
 function Results (props) {
@@ -25,7 +25,7 @@ function Results (props) {
             <h1 className="green">Complete!</h1>
 
             <div className="results">
-                <ChangingProgressProvider values={[0, score]}>
+                <ProgressProvider valueStart={10} valueEnd={score}>
                     {score => (
                     <CircularProgressbar 
                     value={score}
@@ -40,7 +40,7 @@ function Results (props) {
                       })}
                     />
                     )}
-                </ChangingProgressProvider>
+                </ProgressProvider>
             </div>
 
             {/* <div className="results">

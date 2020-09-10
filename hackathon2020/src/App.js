@@ -7,10 +7,10 @@ class App extends Component {
     answers: [],
   }
 
-  onAnswer = (event) => {
+  onAnswer = (bool) => {
     const midAnswers = this.state.answers;
     let answer;
-    if (event.target.value === 'true') {
+    if (bool === 'true') {
       answer = true;
     } else {
       answer = false;

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #F6F6F6;
+  background-color: #E5E5E5;
 }
 
 .mainPage {
@@ -21,12 +21,7 @@ body {
 .hidden {
   display: none;
 }
-.correct {
-  background-color: green;
-}
-.wrong {
-  background-color: red;
-}
+
 
 /* Header styles */
 .header {
@@ -42,19 +37,6 @@ body {
   background: -webkit-linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.nextBtn {
-  border: none;
-  width: 220px;
-  height: 55px;
-  margin: 20px;
-  background: linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
-  box-shadow: 0px 4px 28px #BFBFBF;
-  border-radius: 33px;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
 }
 
 .startGame {
