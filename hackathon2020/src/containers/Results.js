@@ -18,6 +18,8 @@ function Results (props) {
     }
 
     let score = finalTally();
+
+    
     return (
         <div className="mainPage">
             <ProgressBar answers={props.answers}/>

@@ -72,6 +72,7 @@ class QuestionContainer extends Component {
 
   PlayAudio = (clipName) => {
     const snd = new Audio(clipName);
+    snd.volume = 0.2;
     snd.play();
   }
   

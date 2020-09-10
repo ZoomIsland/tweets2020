@@ -33,7 +33,7 @@ function Question(props) {
       ) 
     }else{
       return (
-        <div className="answerBtn" key='1' value="false" onClick={() => props.onAnswer("false")}>
+        <div className="answerBtn" key='1' value="false" onClick={() => props.onAnswer("false")} disabled={props.buttonDisable}>
         {getImage(answer)}
         <button className={"answerBtnActual " + props.falseBtn} disabled={props.buttonDisable}>
           {answer.toUpperCase()}
