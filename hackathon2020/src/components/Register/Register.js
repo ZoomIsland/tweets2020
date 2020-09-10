@@ -6,8 +6,11 @@ function Register() {
     <div className="regBtnDiv">
       <a href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">
         <button className="registerBtn">
-          Register to vote
+          <h3 className="reg-text">Register to vote</h3>
+          <h3 className="reg-hov">Vote.org</h3>
         </button>
+        <div>
+        </div>
       </a>
     </div>
   )

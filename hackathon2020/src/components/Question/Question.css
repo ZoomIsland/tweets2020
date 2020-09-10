@@ -190,12 +190,12 @@
 }
 .nextBtn:hover {
   background: #1DA1F2;
+  cursor: pointer;
 }
 
 .nextBtn:hover .arrow {
   right: 10px;
 }
-
 
 .resultsLink {
   text-decoration: none;
@@ -204,8 +204,6 @@
 .hidden {
   display: none;
 }
-
-
 
 @media only screen and (min-width: 600px) {
   .questionContainer {

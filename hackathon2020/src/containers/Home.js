@@ -18,7 +18,7 @@ function Home () {
                     <img className="trump-fig" src="/Candidate_Trump.svg"/>
                     <img className="bid-fig" src="/Candidate_Biden.svg"/>
                     <img className="hawk-fig" src="/Candidate_Hawkins.svg"/> */}
-                    <img className="can-group" src="/Pittman-ShapeShift-CL.svg"/>
+                    <img className="can-group" src="/candidates.gif"/>
                 </div>
            </div>
 
