@@ -21,10 +21,12 @@ class QuestionContainer extends Component {
   onAnswer = (bool) => {
     this.props.onAnswer(bool)
     if (bool === 'true') {
+      this.PlayAudio('./Audio/Hackathon - Correct Answer.wav')
       this.setState({qHeader: "CORRECT!"})
       this.setState({headColor: "headCorrect"})
       this.setState({trueBtn: "correct"})
     } else {
+      this.PlayAudio('./Audio/Hackathon - Incorrect Answer.wav')
       this.setState({qHeader: "SO CLOSE!"})
       this.setState({headColor: "headWrong"})
       this.setState({falseBtn: "wrong"})
@@ -63,6 +65,11 @@ class QuestionContainer extends Component {
         </button>
         )
      }
+  }
+
+  PlayAudio = (clipName) => {
+    const snd = new Audio(clipName);
+    snd.play();
   }
   
   render() {
