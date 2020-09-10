@@ -13,7 +13,9 @@ class QuestionContainer extends Component {
     headColor: "",
     trueBtn: "",
     falseBtn: "",
-    unselected: "",
+    opaque: "",
+    trueOpacity: "",
+    falseOpacity: "",
     infoHide: 'hidden',
     censorHide: '',
     buttonDisable: false
@@ -27,11 +29,15 @@ class QuestionContainer extends Component {
         this.setState({qHeader: "CORRECT!"})
         this.setState({headColor: "headCorrect"})
         this.setState({trueBtn: "correct"})
+        this.setState({opaque: "opaque"})
+        this.setState({trueOpacity: "visible"})
       } else {
         this.PlayAudio('./Audio/Hackathon - Incorrect Answer.wav')
         this.setState({qHeader: "SO CLOSE!"})
         this.setState({headColor: "headWrong"})
         this.setState({falseBtn: "wrong"})
+        this.setState({opaque: "opaque"})
+        this.setState({falseOpacity: "visible"})
       }
       this.setState({infoHide: ""})
       this.setState({censorHide: "hidden"})
@@ -48,6 +54,9 @@ class QuestionContainer extends Component {
     this.setState({buttonDisable: false});
     this.setState({trueBtn: ""});
     this.setState({falseBtn: ""});
+    this.setState({opaque: ""})
+    this.setState({trueOpacity: ""});
+    this.setState({falseOpacity: ""});
   }
 
   nextBtn = () => {
@@ -94,6 +103,9 @@ class QuestionContainer extends Component {
           buttonDisable={this.state.buttonDisable}
           trueBtn={this.state.trueBtn}
           falseBtn={this.state.falseBtn}
+          opaque={this.state.opaque}
+          trueOpacity={this.state.trueOpacity}
+          falseOpacity={this.state.falseOpacity}
           unselected={this.state.unselected} />
         
         <div className="nextBtnContainer">

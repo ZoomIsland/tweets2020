@@ -25,7 +25,8 @@ body {
 
 /* Header styles */
 .header {
-  /* font-size: 36px; */
+  margin: 15px 10px;
+  font-size: 35px;
   color: #555555;
 }
 .redHead {
@@ -48,11 +49,6 @@ body {
   text-align: center;
   width: 250px;
   padding-top: 20px;
-}
-
-.results {
-  width: 35vw;
-  margin-top: 20px;
 }
 
 .endMsg {
@@ -87,4 +83,10 @@ body {
 
 .tweetContainer {
   position: relative;
+}
+
+@media only screen and (min-width: 650px) {
+  .header {
+    font-size: 60px;
+  }
 }
