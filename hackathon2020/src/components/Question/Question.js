@@ -24,7 +24,7 @@ function Question(props) {
   const buttons = tweet.answers.map(answer => {
     if(tweet.answer === answer){
       return (
-      <div className="answerBtn" key='0' onClick={() => props.onAnswer("true")}>
+      <div className={"answerBtn " + props.opaque + " " + props.trueOpacity} key='0' onClick={() => props.onAnswer("true")}>
         {getImage(answer)}
         <button className={"answerBtnActual " + props.trueBtn} disabled={props.buttonDisable}>
           {answer.toUpperCase()}
@@ -33,7 +33,7 @@ function Question(props) {
       ) 
     }else{
       return (
-        <div className="answerBtn" key='1' value="false" onClick={() => props.onAnswer("false")} disabled={props.buttonDisable}>
+        <div className={"answerBtn " + props.opaque + " " + props.falseOpacity} key='1' value="false" onClick={() => props.onAnswer("false")} disabled={props.buttonDisable}>
         {getImage(answer)}
         <button className={"answerBtnActual " + props.falseBtn} disabled={props.buttonDisable}>
           {answer.toUpperCase()}

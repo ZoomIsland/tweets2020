@@ -120,6 +120,14 @@
   cursor: pointer;
   width: 158px;
 }
+
+.opaque {
+  opacity: 0.25;
+}
+.visible {
+  opacity: 1;
+}
+
 .answerBtnActual {
   width: 158px;
   height: 63px;
@@ -140,17 +148,11 @@
   height: 54px;
 }
 
-.answerBtnActual:disabled {
-  opacity: 0.25;
-}
-
 .correct:disabled {
   background: linear-gradient(0deg, #10C8B2 0%, #8EE9B9 100%);
-  opacity: 1;
 }
 .wrong:disabled {
   background: linear-gradient(0deg, #F21D1D 0%, #F76868 100%);
-  opacity: 1;
 }
 
 .answerImg {
@@ -178,6 +180,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .arrow {

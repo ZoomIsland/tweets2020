@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
-import Routes from './config/routes'
+import Routes from './config/routes';
 
 class App extends Component {
   state = {
@@ -23,7 +24,9 @@ class App extends Component {
 
     return (
       <div className="mainPage">
-        <h1 className="header">tweet <span className="redHead">20</span><span className="blueHead">20</span></h1>
+        <Link className="headerLink" to="/">
+          <h1 className="header">tweet <span className="redHead">20</span><span className="blueHead">20</span></h1>
+        </Link>
         <Routes onAnswer={this.onAnswer} answers={this.state.answers}/> 
       </div>
     );

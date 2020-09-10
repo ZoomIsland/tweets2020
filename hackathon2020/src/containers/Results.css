@@ -26,6 +26,7 @@ max-height: 205px;
 
     text-align: center;
     letter-spacing: 0.08em;
+    cursor: pointer;
 }
 
 .share {
@@ -59,4 +60,8 @@ max-height: 205px;
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.07em;
+}
+
+.score {
+    font-family: Arial, Helvetica, sans-serif;
 }

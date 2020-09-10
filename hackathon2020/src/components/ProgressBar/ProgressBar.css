@@ -11,3 +11,9 @@
     background: #EB5757;
     border-radius: 16px;
 }
+
+@media only screen and (min-width: 650px) {
+    .bar {
+        width: 70vw;
+    }
+}
