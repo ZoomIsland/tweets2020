@@ -42,20 +42,23 @@
     padding-top: 20px;
 }
 
-.blue-home {
+.blue-home, .red-home {
+    max-height: 210px;
     position: relative;
     width: 92%;
     max-width: 415px;
     height: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.blue-home {
     background: -webkit-linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
     border-radius: 84px 84px 84px 0px;
     top: 8%;
-    display: flex;
-    justify-content: center;
     align-items: flex-end;
     margin-bottom: 5%;
     overflow: hidden;
-
 }
 .candidates {
     display: flex;
@@ -64,22 +67,17 @@
 }
 .can-group {
     width: 80%;
+    height: 80%;
     padding-bottom: 8%;
 }
 
 .red-home {
-    position: relative;
-    width: 92%;
-    max-width: 415px;
-    height: 33%;
     background: linear-gradient(0deg, #F21D1D 0%, #F76868 100%);
     opacity: 0.84;
     border-radius: 84px 84px 0px 84px;
     margin-top: 70px;
-    display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 .red-content {
     display: flex;
