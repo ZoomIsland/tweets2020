@@ -1,43 +1,48 @@
 import React from 'react';
 import { Tweet } from 'react-twitter-widgets';
 import questions from '../../Questions'
+import fullTweets from '../../fullTweets'
 import './Question.css'
 
 function Question(props) {
   const getImage = (name) => {
     switch(name) {
-      case "Donald Trump":
+      case "Trump":
         return <img className="answerImg" src="/Candidate_Trump.svg" alt="Donald Trump" />
         break;
-      case "Joe Biden":
+      case "Biden":
         return <img className="answerImg" src="/Candidate_Biden.svg" alt="Joe Biden" />
         break;
-      case "Jo Jorgensen":
+      case "Jorgensen":
         return <img className="answerImg" src="/Candidate_Jorgensen.svg" alt="Jo Jorgensen" />
         break;
-      case "Howie Hawkins":
+      case "Hawkins":
         return <img className="answerImg" src="/Candidate_Hawkins.svg" alt="Howie Hawkins" />
         break;
     }
   }
 
-  const tweet = questions[props.index]
+  // const tweet = questions[props.index]
+  const tweet = fullTweets[props.index]
+  const tweetTime = Date.parse(tweet.tweet.created_at);
+  const tweetDate = new Date(tweetTime)
+  const parsedDate = tweetDate.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric'})
   const buttons = tweet.answers.map(answer => {
     if(tweet.answer === answer){
       return (
-      <div className="answerBtn">
+      <div className="answerBtn" key='0' value="true" onClick={() => props.onAnswer("true")}>
         {getImage(answer)}
-        <button className={props.trueBtn} key='0' disabled={props.buttonDisable} value="true" onClick={props.onAnswer}>
-          {answer}
+        <button className={"answerBtnActual " + props.trueBtn} disabled={props.buttonDisable}>
+          {answer.toUpperCase()}
         </button>
       </div>
       ) 
     }else{
       return (
-        <div className="answerBtn">
+        <div className="answerBtn" key='1' value="false" onClick={() => props.onAnswer("false")}>
         {getImage(answer)}
-        <button className={props.falseBtn} key='1' disabled={props.buttonDisable} value="false" onClick={props.onAnswer}>
-          {answer}
+        <button className={"answerBtnActual " + props.falseBtn} disabled={props.buttonDisable}>
+          {answer.toUpperCase()}
         </button>
         </div>
         )
@@ -48,11 +53,20 @@ function Question(props) {
     <div className="questionContainer">
       <div className="tweetContainer">
             <div className={"censor " + props.censorHide}>
-            <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
             </div>
-            <div className="tweet-it">
+            <div className="tweetHead">
+              <img className="tweetImg" src={tweet.tweet.profile_image_url} />
+              <div className="headNames">
+                <h4 className="realName">{tweet.tweet.name}</h4>
+                <h5 className="username">{"@" + tweet.tweet.username}</h5>
+              </div>
+            </div>
+            <p className="tweetText">{tweet.tweet.text}</p>
+            <p className="tweetDate">{parsedDate}</p>
+            {/* <div className="tweet-it">
               <Tweet tweetId={tweet.question} />
-            </div>
+            </div> */}
       </div>
       <div className="answerBtns">
         {buttons}
