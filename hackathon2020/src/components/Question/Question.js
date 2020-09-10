@@ -1,6 +1,4 @@
 import React from 'react';
-import { Tweet } from 'react-twitter-widgets';
-import questions from '../../Questions'
 import fullTweets from '../../fullTweets'
 import './Question.css'
 
@@ -9,16 +7,12 @@ function Question(props) {
     switch(name) {
       case "Trump":
         return <img className="answerImg" src="/Candidate_Trump.svg" alt="Donald Trump" />
-        break;
       case "Biden":
         return <img className="answerImg" src="/Candidate_Biden.svg" alt="Joe Biden" />
-        break;
       case "Jorgensen":
         return <img className="answerImg" src="/Candidate_Jorgensen.svg" alt="Jo Jorgensen" />
-        break;
       case "Hawkins":
         return <img className="answerImg" src="/Candidate_Hawkins.svg" alt="Howie Hawkins" />
-        break;
     }
   }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Share } from 'react-twitter-widgets'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ProgressBar from '../components/ProgressBar/ProgressBar'
@@ -9,13 +8,13 @@ import './Results.css';
 function Results (props) {
     const finalTally = () => {
     let totalRight = 0;
-    for (let i=0; i < props.answers.length; i++) {
-        if (props.answers[i] === true) {
-            totalRight++;
+        for (let i=0; i < props.answers.length; i++) {
+            if (props.answers[i] === true) {
+                totalRight++;
+            }
         }
-    }
-    let percent = Math.floor((totalRight / 10) * 100);
-    return percent;
+        let percent = Math.floor((totalRight / 10) * 100);
+        return percent;
     }
 
     let score = finalTally();
@@ -41,23 +40,8 @@ function Results (props) {
                     )}
                 </ProgressProvider>
             </div>
-
-            {/* <div className="results">
-                <CircularProgressbar 
-                    value={finalTally()} 
-                    text={`${finalTally()}%`}
-                    counterClockwise={true}
-                    strokeWidth={10}
-                    styles={buildStyles({
-                        textColor: "#10C8B2",
-                        pathColor: "#10C8B2",
-                        trailColor: "white",
-                        textSize: "35px",
-                      })}
-                />
-            </div> */}
             <div className="shareTweet">
-            <a className="share" href="https://twitter.com/intent/tweet?text=Hello%20world">
+            <a className="share" href={`https://twitter.com/intent/tweet?text=I%20got%20${score}%25%20right%20on%20a%20Presidential%20Tweet%20test!%20Try%20it%20out%3A&url=http%3A%2F%2Ftweets2020.herokuapp.com`}>
                 <div className="shareText">
                     Tweet My Score
                 </div>
