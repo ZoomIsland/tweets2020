@@ -6,16 +6,16 @@ import './Question.css'
 function Question(props) {
   const getImage = (name) => {
     switch(name) {
-      case "Donald Trump":
+      case "Trump":
         return <img className="answerImg" src="/Candidate_Trump.svg" alt="Donald Trump" />
         break;
-      case "Joe Biden":
+      case "Biden":
         return <img className="answerImg" src="/Candidate_Biden.svg" alt="Joe Biden" />
         break;
-      case "Jo Jorgensen":
+      case "Jorgensen":
         return <img className="answerImg" src="/Candidate_Jorgensen.svg" alt="Jo Jorgensen" />
         break;
-      case "Howie Hawkins":
+      case "Hawkins":
         return <img className="answerImg" src="/Candidate_Hawkins.svg" alt="Howie Hawkins" />
         break;
     }
@@ -25,19 +25,19 @@ function Question(props) {
   const buttons = tweet.answers.map(answer => {
     if(tweet.answer === answer){
       return (
-      <div className="answerBtn">
+      <div className="answerBtn" key='0' value="true" onClick={() => props.onAnswer("true")}>
         {getImage(answer)}
-        <button className={props.trueBtn} key='0' disabled={props.buttonDisable} value="true" onClick={props.onAnswer}>
-          {answer}
+        <button className={"answerBtnActual " + props.trueBtn} disabled={props.buttonDisable}>
+          {answer.toUpperCase()}
         </button>
       </div>
       ) 
     }else{
       return (
-        <div className="answerBtn">
+        <div className="answerBtn" key='1' value="false" onClick={() => props.onAnswer("false")}>
         {getImage(answer)}
-        <button className={props.falseBtn} key='1' disabled={props.buttonDisable} value="false" onClick={props.onAnswer}>
-          {answer}
+        <button className={"answerBtnActual " + props.falseBtn} disabled={props.buttonDisable}>
+          {answer.toUpperCase()}
         </button>
         </div>
         )

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Qheader(props) {
   return (
-    <h2 className="who">{props.header}</h2>
+    <h2 className={props.headColor + " who"}>{props.header}</h2>
   )
 }
 

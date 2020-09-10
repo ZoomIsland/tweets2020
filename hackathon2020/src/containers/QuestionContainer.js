@@ -10,6 +10,7 @@ class QuestionContainer extends Component {
   state = {
     index: 0,
     qHeader: "Who tweeted this?",
+    headColor: "",
     trueBtn: "",
     falseBtn: "",
     infoHide: 'hidden',
@@ -17,13 +18,15 @@ class QuestionContainer extends Component {
     buttonDisable: false
   }
 
-  onAnswer = (event) => {
-    this.props.onAnswer(event)
-    if (event.target.value === 'true') {
-      this.setState({qHeader: "Correct!"})
+  onAnswer = (bool) => {
+    this.props.onAnswer(bool)
+    if (bool === 'true') {
+      this.setState({qHeader: "CORRECT!"})
+      this.setState({headColor: "headCorrect"})
       this.setState({trueBtn: "correct"})
     } else {
-      this.setState({qHeader: "Wrong!"})
+      this.setState({qHeader: "SO CLOSE!"})
+      this.setState({headColor: "headWrong"})
       this.setState({falseBtn: "wrong"})
     }
     this.setState({infoHide: ""})
@@ -34,6 +37,7 @@ class QuestionContainer extends Component {
   onNext = () => {
     this.setState({index: this.state.index + 1});
     this.setState({qHeader: "Who tweeted this?"})
+    this.setState({headColor: ""})
     this.setState({infoHide: "hidden"});
     this.setState({censorHide: ""});
     this.setState({buttonDisable: false});
@@ -45,12 +49,18 @@ class QuestionContainer extends Component {
      if (this.props.answers.length === 10) {
          return (
              <Link to='/results'>
-                 <button className={this.state.infoHide + " nextBtn"}>See Results</button>
+                <button className={this.state.infoHide + " nextBtn"}>
+                  SEE MY SCORE
+                  <img src="/arrow-forward.svg" />
+                </button>
              </Link>
          )
      } else {
         return (
-        <button className={this.state.infoHide + " nextBtn"} onClick={this.onNext}>Next</button>
+        <button className={this.state.infoHide + " nextBtn"} onClick={this.onNext}>
+          NEXT
+          <img className="arrow" src="/arrow-forward.svg" />
+        </button>
         )
      }
   }
@@ -62,7 +72,7 @@ class QuestionContainer extends Component {
 
         <ProgressBar answers={this.props.answers}/>
 
-        <Qheader header={this.state.qHeader} />
+        <Qheader header={this.state.qHeader} headColor={this.state.headColor} />
         
         <Question 
           index={this.state.index}

@@ -5,6 +5,16 @@
 }
 
 .registerBtn {
-  border: 1px solid black;
-  padding: 6px 20px;
+  background: #E5E5E5;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 45px;
+  width: 123px;
+  height: 30px;
+  color: #333333;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
 }
