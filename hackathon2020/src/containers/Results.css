@@ -7,8 +7,8 @@
 }
 
 .CircularProgressbar {
-max-width: 205px;
-max-height: 205px;
+    max-width: 205px;
+    max-height: 205px;
 }
 
 .regBtn {
@@ -64,4 +64,14 @@ max-height: 205px;
 
 .score {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.share, .regVote {
+    transition: 250ms;
+}
+.share:hover, .regVote:hover {
+    background: linear-gradient(0deg, #10C8B2 0%, #8EE9B9 100%);
+    border-radius: 36px;
+    /* width: 190px;
+    height: 60px; */
 }

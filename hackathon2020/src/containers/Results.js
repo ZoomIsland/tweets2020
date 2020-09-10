@@ -24,7 +24,7 @@ function Results (props) {
     return (
         <div className="mainPage">
             <ProgressBar answers={props.answers}/>
-            <h1 className="green">Complete!</h1>
+            <h1 className="green">Your Score</h1>
 
             <div className="results">
                 <ProgressProvider valueStart={10} valueEnd={score}>
@@ -44,7 +44,7 @@ function Results (props) {
                 </ProgressProvider>
             </div>
             <div className="shareTweet">
-            <a className="share" href={`https://twitter.com/intent/tweet?text=I%20got%20${score}%25%20right%20on%20a%20Presidential%20Tweet%20test!%20Try%20it%20out%3A&url=http%3A%2F%2Ftweets2020.herokuapp.com`}>
+            <a className="share" href={`https://twitter.com/intent/tweet?text=I%20got%20${score}%25%20right%20on%20a%20Presidential%20Tweet%20test!%20Try%20it%20out%3A&url=https%3A%2F%2Ftweets2020.netlify.app`}>
                 <div className="shareText">
                     Tweet My Score
                 </div>

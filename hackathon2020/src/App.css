@@ -67,7 +67,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 35px;
+  margin-top: 35px;
   position: relative;
 }
 
