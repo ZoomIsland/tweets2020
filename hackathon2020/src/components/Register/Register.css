@@ -5,7 +5,6 @@
 }
 
 .registerBtn {
-<<<<<<< HEAD
   background: #E5E5E5;
   border: 1px solid #333333;
   box-sizing: border-box;
@@ -18,11 +17,4 @@
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-=======
-  background: #F2F2F2;
-  border: 1px solid #333333;
-  box-sizing: border-box;
-  border-radius: 45px;
-  padding: 6px 20px;
->>>>>>> submaster
 }
