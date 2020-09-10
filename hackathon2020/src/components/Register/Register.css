@@ -1,0 +1,57 @@
+.regBtnDiv {
+  position: relative;
+  bottom: 25px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.registerBtn {
+  position: relative;
+  background: #E5E5E5;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 45px;
+  width: 123px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registerBtn:hover {
+  cursor: pointer;
+  background-color: #44B1F6;
+  border-color: #fff;
+}
+.registerBtn:hover .reg-text {
+  display: none;
+}
+.registerBtn:hover .reg-hov {
+  color: #fff;
+}
+
+.reg-text {
+  position: absolute;
+  text-align: center;
+  background: #E5E5E5;
+  height: 70%;
+  z-index: 10;
+}
+.reg-text, .reg-hov {
+  position: absolute;
+  color: #333333;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  transition: 250ms;
+}
+
+.reg-hov {
+  width: 123px;
+  height: 70%;
+  z-index: 7;
+}
+.registerBtn:hover {
+  cursor: pointer;
+}

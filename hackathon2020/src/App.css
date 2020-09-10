@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+.mainPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Header styles */
+.header {
+  margin: 15px 10px;
+  font-size: 35px;
+  color: #555555;
+}
+.redHead {
+  background: -webkit-linear-gradient(0deg, #F21D1D 0%, #F76868 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blueHead {
+  background: -webkit-linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headerLink {
+  text-decoration: none;
+}
+
+.startGame {
+  width: 165px;
+  height: 75px;
+}
+
+.guess {
+  text-align: center;
+  width: 250px;
+  padding-top: 20px;
+}
+
+.endMsg {
+  text-align: center;
+  width: 260px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.shareTweet {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 35px;
+  position: relative;
+}
+
+.regLink {
+  width: 230px;
+  height: 75px;
+}
+
+.regVote {
+  width: 230px;
+  height: 75px;
+  background-color: #c8c8c8;
+  position: relative;
+  /* bottom: 45px; */
+}
+
+.tweetContainer {
+  position: relative;
+}
+
+@media only screen and (min-width: 650px) {
+  .header {
+    font-size: 60px;
+  }
+}

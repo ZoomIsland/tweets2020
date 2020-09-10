@@ -1,0 +1,19 @@
+.bar {
+    width: 335px;
+    height: 8px;
+    background: #DCDCDC;
+    border-radius: 16px;
+    margin: 10px;
+}
+
+.complete {
+    height: 8px;
+    background: #EB5757;
+    border-radius: 16px;
+}
+
+@media only screen and (min-width: 650px) {
+    .bar {
+        width: 70vw;
+    }
+}
