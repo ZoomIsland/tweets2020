@@ -52,6 +52,7 @@ body {
 
 .results {
   width: 35vw;
+  margin-top: 20px;
 }
 
 .endMsg {
