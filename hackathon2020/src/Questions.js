@@ -44,11 +44,10 @@ const questions = [
         answer: "Biden",
         answers: ["Jorgensen", "Biden"]
     },
-    // 9 Questions so far, repeating below
     {
-        question: "1303079343766331393",
-        answer: "Biden",
-        answers: ["Biden", "Trump"]
+        question: "1298671449968959490",
+        answer: "Trump",
+        answers: ["Jorgensen", "Trump"]
     }
   ]
   export default questions;

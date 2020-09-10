@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tweet } from 'react-twitter-widgets';
 import questions from '../../Questions'
+import fullTweets from '../../fullTweets'
 import './Question.css'
 
 function Question(props) {
@@ -21,7 +22,11 @@ function Question(props) {
     }
   }
 
-  const tweet = questions[props.index]
+  // const tweet = questions[props.index]
+  const tweet = fullTweets[props.index]
+  const tweetTime = Date.parse(tweet.tweet.created_at);
+  const tweetDate = new Date(tweetTime)
+  const parsedDate = tweetDate.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric'})
   const buttons = tweet.answers.map(answer => {
     if(tweet.answer === answer){
       return (
@@ -48,11 +53,20 @@ function Question(props) {
     <div className="questionContainer">
       <div className="tweetContainer">
             <div className={"censor " + props.censorHide}>
-            <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
             </div>
-            <div className="tweet-it">
+            <div className="tweetHead">
+              <img className="tweetImg" src={tweet.tweet.profile_image_url} />
+              <div className="headNames">
+                <h4 className="realName">{tweet.tweet.name}</h4>
+                <h5 className="username">{"@" + tweet.tweet.username}</h5>
+              </div>
+            </div>
+            <p className="tweetText">{tweet.tweet.text}</p>
+            <p className="tweetDate">{parsedDate}</p>
+            {/* <div className="tweet-it">
               <Tweet tweetId={tweet.question} />
-            </div>
+            </div> */}
       </div>
       <div className="answerBtns">
         {buttons}
