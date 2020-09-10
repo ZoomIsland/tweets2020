@@ -107,6 +107,7 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  width: 158px;
 }
 .answerBtnActual {
   width: 158px;
