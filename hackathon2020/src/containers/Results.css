@@ -60,3 +60,7 @@ max-height: 205px;
     line-height: 30px;
     letter-spacing: 0.07em;
 }
+
+.score {
+    font-family: Arial, Helvetica, sans-serif;
+}
