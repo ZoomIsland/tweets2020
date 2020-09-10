@@ -1,4 +1,5 @@
 .questionPage {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -34,7 +35,7 @@
 }
 
 .tweetContainer {
-  width: calc(95% - 40px);
+  width: 85%;
   position: relative;
   pointer-events: none;
   border-radius: 15px;
