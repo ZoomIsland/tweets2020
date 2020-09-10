@@ -46,6 +46,7 @@
 .blue-home {
     position: relative;
     width: 92%;
+    max-width: 415px;
     height: 33%;
     background: -webkit-linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
     border-radius: 84px 84px 84px 0px;
@@ -57,25 +58,17 @@
 }
 .candidates {
     display: flex;
+    justify-content: center;
+}
+.can-group {
+    width: 90%;
     padding-bottom: 8%;
-}
-.trump-fig {
-    height: 13vh;
-}
-.jorg-fig {
-    height: 13vh;
-}
-.bid-fig {
-    height: 13vh;
-}
-.hawk-fig {
-    height: 13vh;
-    /* padding-right: 2%; */
 }
 
 .red-home {
     position: relative;
     width: 92%;
+    max-width: 415px;
     height: 33%;
     background: linear-gradient(0deg, #F21D1D 0%, #F76868 100%);
     opacity: 0.84;

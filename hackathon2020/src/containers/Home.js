@@ -14,10 +14,11 @@ function Home () {
             
             <div className="blue-home">
                 <div className="candidates">
-                    <img className="jorg-fig" src="/Candidate_Jorgensen.svg"/>
+                    {/* <img className="jorg-fig" src="/Candidate_Jorgensen.svg"/>
                     <img className="trump-fig" src="/Candidate_Trump.svg"/>
                     <img className="bid-fig" src="/Candidate_Biden.svg"/>
-                    <img className="hawk-fig" src="/Candidate_Hawkins.svg"/>
+                    <img className="hawk-fig" src="/Candidate_Hawkins.svg"/> */}
+                    <img className="can-group" src="/Pittman-ShapeShift-CL.svg"/>
                 </div>
            </div>
 
