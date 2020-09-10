@@ -18,9 +18,6 @@ body {
   position: relative;
 }
 
-h1, h2 {
-  margin: 20px;
-}
 .hidden {
   display: none;
 }
@@ -28,7 +25,7 @@ h1, h2 {
 
 /* Header styles */
 .header {
-  font-size: 36px;
+  /* font-size: 36px; */
   color: #555555;
 }
 .redHead {
@@ -42,12 +39,6 @@ h1, h2 {
   -webkit-text-fill-color: transparent;
 }
 
-.img-placeholder {
-  width: 260px;
-  height: 200px;
-  background-color: darkgray;
-}
-
 .startGame {
   width: 165px;
   height: 75px;
@@ -56,11 +47,11 @@ h1, h2 {
 .guess {
   text-align: center;
   width: 250px;
+  padding-top: 20px;
 }
 
 .results {
   width: 35vw;
-
 }
 
 .endMsg {
@@ -76,7 +67,7 @@ h1, h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 45px;
+  margin: 35px;
   position: relative;
 }
 
