@@ -34,13 +34,16 @@
 }
 
 .tweetContainer {
-  width: calc(95% - 40px);
+  width: 85%;
   position: relative;
   pointer-events: none;
   border-radius: 15px;
   background: white;
   overflow: hidden;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .censor,
