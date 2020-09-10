@@ -26,6 +26,7 @@ max-height: 205px;
 
     text-align: center;
     letter-spacing: 0.08em;
+    cursor: pointer;
 }
 
 .share {
