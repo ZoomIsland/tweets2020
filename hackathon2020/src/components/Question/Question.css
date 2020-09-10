@@ -6,6 +6,7 @@
   text-align: center;
   letter-spacing: 0.07em;
   color: black;
+  margin: 16px;
 }
 .headWrong {
   color: #F21D1D;
@@ -16,28 +17,29 @@
 
 .questionContainer {
   width: 100%;
+  height: 470px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   max-width: 550px;
+  position: relative;
 }
 
 .tweetContainer {
-  width: 95%;
-  min-height: 150px;
+  width: calc(95% - 40px);
   position: relative;
   pointer-events: none;
   border-radius: 15px;
   background: white;
   overflow: hidden;
+  padding: 20px;
 }
 
 .censor,
 .tweetHead {
   width: 100%;
-  height: 60px;
-  margin-top: 20px;
+  height: 50px;
 }
 .tweetHead {
   display: flex;
@@ -47,7 +49,6 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  margin-left: 20px;
 }
 .headNames {
   margin-left: 10px;
@@ -70,12 +71,11 @@
 }
 
 .tweetText {
-  padding: 5px 20px;
+  padding: 5px 0px;
 }
 
 .tweetDate {
   font-size: 10px;
-  padding: 0px 20px 10px 20px;
 }
 
 .censor {
@@ -91,39 +91,16 @@
   font-size: 35px;
 }
 
-/* .censor {
-  height: 75px;
-  width: 100%;
-  max-width: 600px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  max-width: 600px;
-  background: black;
-  z-index: 10;
-}
-
-.tweet-it {
-  width: 95%;
-  height: 100%;
-  position: relative;
-} */
-
 .hidden {
   display: none;
-}
-
-.twitter-tweet-rendered {
-  font-size: 8px !important;
 }
 
 .answerBtns {
   display: flex;
   width: 95%;
   justify-content: space-around;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
 }
 .answerBtn {
   display: flex;
@@ -143,7 +120,14 @@
   line-height: 18px;
   font-weight: bold;
   letter-spacing: 0.08em;
+  transition: 250ms;
 }
+
+.answerBtnActual:hover {
+  width: 136px;
+  height: 54px;
+}
+
 .answerBtnActual:disabled {
   background: linear-gradient(0deg, #1DA1F2 44.79%, #5FBEF9 100%);
   opacity: 0.25;
@@ -182,11 +166,33 @@
   justify-content: center;
 }
 
+.arrow {
+  position: absolute;
+  right: 30px;
+  transition: 250ms;
+}
+
+.nextBtn:hover {
+  background: #1DA1F2;
+}
+
+.nextBtn:hover .arrow {
+  right: 10px;
+}
+
+
+.resultsLink {
+  text-decoration: none;
+}
+
 .hidden {
   display: none;
 }
 
-.arrow {
-  position: absolute;
-  right: 10px;
+
+
+@media only screen and (min-width: 600px) {
+  .questionContainer {
+    height: 400px;
+  }
 }

@@ -48,10 +48,10 @@ class QuestionContainer extends Component {
   nextBtn = () => {
      if (this.props.answers.length === 10) {
          return (
-             <Link to='/results'>
+             <Link className="resultsLink" to='/results'>
                 <button className={this.state.infoHide + " nextBtn"}>
                   SEE MY SCORE
-                  <img src="/arrow-forward.svg" />
+                  <img className="arrow" src="/arrow-forward.svg" />
                 </button>
              </Link>
          )
