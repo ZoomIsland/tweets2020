@@ -18,19 +18,19 @@ The results page displays the user's score as a percentage of the questions they
 ## Wireframes
 
 ### Home Page
-<img src="/wf-home.png">
+<img src="./public/wf-home.png">
 
 ### Question Page
-<img src="/wf-page.png">
+<img src="./public/wf-page.png">
 
 ### Correct Answer
-<img src="/wf-correct.png">
+<img src="./public/wf-correct.png">
 
 ### Incorrect Answer
 <img src="./public/wf-wrong.png">
 
 ### Results Page
-<img src="/wf-results.png">
+<img src="./public/wf-results.png">
 
 
 ## Technologies Used
