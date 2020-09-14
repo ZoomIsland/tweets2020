@@ -27,7 +27,7 @@ The results page displays the user's score as a percentage of the questions they
 <img src="/wf-correct.png">
 
 ### Incorrect Answer
-<img src="/wf-wrong.png">
+<img src="./public/wf-wrong.png">
 
 ### Results Page
 <img src="/wf-results.png">
