@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# tweet2020
+https://tweets2020.netlify.app/
 
-## Available Scripts
+tweet2020 is an app designed to engage a younger generation of voters by utilizing social media to help give users an insight into the online persona of the four major candidates participating in the 2020 presidential election.
 
-In the project directory, you can run:
+## User Story
 
-### `npm start`
+Upon loading, the page displays graphics depicting characterized icons of the four 2020 presidential candidates (Joe Biden, Howie Hawking, Jo Jorgensen, and Donald Trump) as well as a "PLAY NOW" button that begins the game and a "Register to vote" button at the bottom of the screen that, when clicked, will redirect the user to vote.org where they may check their voter registration status and register if they have not already. This button is present on every screen.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clicking the "Play Now" button brings the user to the question page where the user is presented with a tweet created by one of the four presidential candidates (with identifying informationredacted). The user is offered a choice between two of the four candidates to select as the original author of the tweet. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Upon selecting their choice, the user is met with an "uncovered" tweet showing the identity of the author as well as a message at the top of the screen indicating whether they selected the correct or incorrect choice. Depending on if the selection is correct or incorrect, the selected option's button will change to either green or red respectively and a sound will follow to indicate if the choice is correct or not. A "NEXT" button appears upon answer selection which will take the user to the next question.
 
-### `npm test`
+A progress bar at the top of the screen tracks what percentage of the total questions the user has answered. When the user has selected their choice for the final question, a "SEE MY SCORE" button will appear below the choices which will take the user to the results page.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The results page displays the user's score as a percentage of the questions they answered correctly as well as an option to tweet their score with a link to the app. The title, "tweet2020" at the top of the page also acts as a link back to the home page.
 
-### `npm run build`
+## Wireframes
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Home Page
+<img src="/wf-home.png">
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Question Page
+<img src="/wf-page.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Correct Answer
+<img src="/wf-correct.png">
 
-### `npm run eject`
+### Incorrect Answer
+<img src="/wf-wrong.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Results Page
+<img src="/wf-results.png">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+- Deployed using netlify

@@ -6,13 +6,13 @@ function Question(props) {
   const getImage = (name) => {
     switch(name) {
       case "Trump":
-        return <img className="answerImg" src="/Candidate_Trump_GIF.gif" alt="Donald Trump" disabled={props.buttonDisable} />
+        return <img className="answerImg" src="/Candidate_Trump.svg" alt="Donald Trump" />
       case "Biden":
-        return <img className="answerImg" src="/Candidate_Biden.gif" alt="Joe Biden" disabled={props.buttonDisable} />
+        return <img className="answerImg" src="/Candidate_Biden.svg" alt="Joe Biden" />
       case "Jorgensen":
-        return <img className="answerImg" src="/Candidate_Jorgensen.gif" alt="Jo Jorgensen" disabled={props.buttonDisable} />
+        return <img className="answerImg" src="/Candidate_Jorgensen.svg" alt="Jo Jorgensen" />
       case "Hawkins":
-        return <img className="answerImg" src="/Candidate_Hawkins.gif" alt="Howie Hawkins" disabled={props.buttonDisable} />
+        return <img className="answerImg" src="/Candidate_Hawkins.svg" alt="Howie Hawkins" />
     }
   }
 
@@ -24,7 +24,7 @@ function Question(props) {
   const buttons = tweet.answers.map(answer => {
     if(tweet.answer === answer){
       return (
-      <div className={"answerBtn " + props.opaque + " " + props.trueOpacity} key='0' onClick={() => props.onAnswer("true")}>
+      <div className="answerBtn" key='0' onClick={() => props.onAnswer("true")}>
         {getImage(answer)}
         <button className={"answerBtnActual " + props.trueBtn} disabled={props.buttonDisable}>
           {answer.toUpperCase()}
@@ -33,7 +33,7 @@ function Question(props) {
       ) 
     }else{
       return (
-        <div className={"answerBtn " + props.opaque + " " + props.falseOpacity} key='1' value="false" onClick={() => props.onAnswer("false")} disabled={props.buttonDisable}>
+        <div className="answerBtn" key='1' value="false" onClick={() => props.onAnswer("false")}>
         {getImage(answer)}
         <button className={"answerBtnActual " + props.falseBtn} disabled={props.buttonDisable}>
           {answer.toUpperCase()}

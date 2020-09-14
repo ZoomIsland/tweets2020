@@ -64,7 +64,7 @@ class QuestionContainer extends Component {
          return (
              <Link className="resultsLink" to='/results'>
                 <button className={this.state.infoHide + " nextBtn"}>
-                  SEE MY SCORE
+                  SEE MY SCORE 
                   <img className="arrow" src="/arrow-forward.svg" />
                 </button>
              </Link>
